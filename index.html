@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <section id="haut">
+        <div class="encadr" id="perso">
+            <h3>Personnage</h3>
+            
+            <div class="save">
+                <button class="button_modal" id="button_modal" >Mon personnage</button>
+                <button id="sendData">Sauvegarder</button>    
+            </div>
+            <ul>
+                <li>Nom : <span id="nom"></span></li>
+                <li>Classe : <span id="classe"></span></li>
+                <li>PV : <span id="pv"></span> / <span id="pvMax"></span></li>    
+                <div id="barre">
+                    <div id="barre2"></div>
+                </div>
+                <li>Magie : <span id="mp"></span> / <span id="mpMax"></span></li>
+                <li>OR : <span id="or"></span></li>     
+            </ul>
+            <div id="imgPerso">
+                <img id="imaPer" src=" " alt="">   
+            </div>
+           
+        </div>
+        <div class="encadr" id="ennemie">
+            <div id="imgEnnemi">
+                <img id="ima" src="" alt="">
+                <div id="barreEn">
+                    <div id="barreEn2"></div>
+                </div>
+                <button id="buttonModalEnnemi">Voir les caractéristiques de ton ennemi</button>
+                
+            </div>
+            
+            <div id="infoCombat">
+                <div>
+                    <p id="Textennem"></p>
+    
+                </div>
+                <div >
+                    <p id="choix"></p>
+                    <div id="commencerCombat">
+                        <div class="btn-action">
+                            <button id="commencer">Commencer le combat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="encadr" id="magasin">
+            <h3>Magasin</h3>
+            <p>Le prix de chaque items est de <span id="prix"></span> or</p>
+            <ul>
+                <li>Améliorer attaque </li>
+                <button id="armeMaga">choisir</button>
+                
+                <li><br>Améliorer sort :</li>
+                <button id="sortMaga">choisir</button>
+                <li><br>Améliorer la protection : </li>
+                <button id="protectMaga">choisir</button>
+                <li><br>Améliorer la protection magique :</li>
+                <button id="protectMagMaga">choisir</button>
+                <li><br>Augmenter l'endurance magique : </li>
+                <button id="magieMaga">choisir</button>
+                <li><br>Augmenter l'endurance :</li>
+                <button id="MaxPvMaga">choisir</button>
+                <li><br>Restaurer les PV :</li>
+                <button id="PVMaga">choisir</button>
+                <li><br>Restaurer les MP :</li>
+                <button id="MPMaga">choisir</button>
+            </ul>
+
+        </div>
+    </section>
+    <section>
+        <div class="encadr" id="historik" >
+            <h3>Historique</h3>
+            <ul id="historique">
+                
+            </ul>
+
+        </div>
+        <div class="encadr" id="action" >
+            <h3>Que voulez-vous faire?</h3>
+            <div class="btn-action" id="btn-action">
+                <button id="attaqueChoix">Attaquer</button>
+                <button id="sortChoix">Utiliser un sort</button>
+            </div>
+            
+            <div class="btn-action" id="ready">
+                <button id="pret">Je suis pret!</button>
+            </div>
+            <div class="btn-action" id="suite">
+                <button id="suiteDuJeu">Continuons</button>
+            </div>
+
+            
+            
+
+        </div>
+
+    </section>
+  
+
+
+    <form id="addTask">
+        
+        <input type="hidden" name="saveNom" id="saveNom" value="b" >
+        <input type="hidden" name="saveClasse" id="saveClasse" value="b" >
+        <input type="hidden" name="saveOr" id="saveOr" value="b" >
+        <input type="hidden" name="saveAttaque" id="saveAttaque" value="b" >
+        <input type="hidden" name="saveAttaqueMag" id="saveAttaqueMag" value="b" >
+        <input type="hidden" name="saveDefMag" id="saveDefMag" value="b" >
+        <input type="hidden" name="saveDef" id="saveDef" value="b" >
+        <input type="hidden" name="saveVitesse" id="saveVitesse" value="b" >
+        <input type="hidden" name="savePV" id="savePV" value="b" >
+        <input type="hidden" name="savePvMax" id="savePvMax" value="b" >
+        <input type="hidden" name="saveMaxMp" id="saveMaxMp" value="b" >
+        <input type="hidden" name="saveMp" id="saveMp" value="b" >
+
+    </form>
+
+    <div id="modal_perso">
+        <button id="close">X</button>
+        <h3>Mon Personnage:</h3>
+        <h4>Détails des caractéristiques :</h4>
+        <ul>
+            <li>Nom : <span id="ModaleNomPerso"></span></li>
+            <li>Classe : <span id="classeM"></span></li>
+            <li>PV : <span id="pvM"></span> / <span id="pvMaxM"></span></li>
+            <li>Magie : <span id="mpM"></span> / <span id="mpMaxM"></span></li>
+            <li>OR : <span id="orM"></span></li>
+            <li>Puissance  Attaque : <span id="attaque"></span></li>
+            <li>Puissance  Sort : <span id="attaqueMag"></span></li>
+            <li>Puissance Defensive : <span id="defense"></span></li>
+            <li>Puissance Bouclier Magie : <span id="defenseMagic"></span></li>
+            <li>Vitesse : <span id="ModaleVitessePerso"></span></li>
+
+            
+
+        </ul>
+    </div>
+
+    <div id="modal_ennemi">
+        <button id="closeME">X</button>
+        <h3>Ton ennemi:</h3>
+        <h4>Détails des caractéristiques :</h4>
+        <ul>
+            
+            <li>Classe : <span id="classeEn"></span></li>
+            <li>PV : <span id="pvEn"></span>
+            <li>Puissance  Attaque : <span id="attaqueEn"></span></li>
+            <li>Puissance  Sort : <span id="attaqueMagEn"></span></li>
+            <li>Puissance Defensive : <span id="defenseEn"></span></li>
+            <li>Puissance Bouclier Magie : <span id="defenseMagicEn"></span></li>
+            
+
+            
+
+        </ul>
+    </div>
+
+    <div id="modal_debut">
+        <h2>Bienvenue</h2>
+        
+        <div id="ChoixPartie">
+            <h4>Pour commencer choisi le type de partie que tu veux:</h4>
+            <span>nouvelle partie ou partie existante?</span>
+            <select name="" id="SelectPartie">
+                <option value="1">Nouveau</option>
+                <option value="2">Continuer Partie</option>    
+            </select>
+            <button id="ButtonChoixPartie">OK</button>
+
+        </div>
+        
+
+        <div>
+            <div id="creationPerso">
+                <h4>Tu dois maintenant créer ton personnage:</h4>
+                <span>en renseignant sa classe et son nom : </span>
+                
+
+                <p id="crea">La classe de votre personnage : </p>
+                <select id="choixClasse" name="" id="">
+                    <option value="mage">Mage</option>
+                    <option value="guerrier">Guerrier</option>
+                </select>
+    
+                <div>
+                   <p  id="crea">Le nom de votre personnage : </p>
+                    
+                    <input id="ChoixNomPerso" type="text" placeholder="Le nom de votre personnage">
+                </div>
+    
+                
+    
+            </div>
+            <button  id="CreerPerso">GO</button>
+
+        </div>
+
+        <div >
+            <ul style="visibility: hidden;" id="load">
+
+            
+            </ul>
+            
+
+        </div>
+        
+        
+        
+    </div>
+
+    
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

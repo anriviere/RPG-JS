@@ -1,0 +1,164 @@
+#modal_perso {
+  border: solid;
+  position: absolute;
+  top: -700px;
+  left: 10px;
+
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10%;
+  border: solid 1px;
+}
+
+#modal_ennemi {
+  border: solid;
+  position: absolute;
+  top: -700px;
+  right: 30px;
+
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10%;
+  border: solid 1px;
+}
+
+#historik {
+  height: 90pt;
+  overflow: auto;
+}
+
+#modal_debut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  border-radius: 5%;
+  border: solid 1px;
+
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+#CreerPerso {
+  margin-top: 6px;
+}
+
+button {
+  border: 1px solid rgb(189, 39, 39);
+
+  background-color: white;
+  margin: 1px;
+}
+
+button:hover {
+  background-color: rgb(189, 39, 39);
+  color: white;
+}
+
+.encadr {
+  border: 1px solid black;
+  padding: 8px;
+  margin-bottom: 4px;
+
+  height: 40%;
+}
+ul {
+  list-style: none;
+}
+
+#haut {
+  width: 100%;
+}
+
+#perso,
+#ennemie,
+#magasin {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#imgEnnemi {
+  width: 33%;
+  margin: 0 auto;
+
+  align-items: center;
+}
+
+#imgPerso {
+  width: 50%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+#infoCombat {
+  margin: 0 auto;
+}
+
+#perso {
+  width: 20%;
+  height: 250pt;
+  overflow: auto;
+}
+#ennemie {
+  width: 55%;
+  height: 250pt;
+  overflow: auto;
+}
+#magasin {
+  width: 20%;
+  height: 250pt;
+  overflow: auto;
+}
+#action {
+  align-content: center;
+}
+
+.histoennemi {
+  color: rgb(189, 39, 39);
+  text-align: right;
+  padding-right: 90px;
+}
+.action {
+  height: 100px;
+}
+
+.btn-action {
+  margin: 0 auto;
+  width: 50%;
+}
+.save {
+  margin-left: 70px;
+}
+
+#barre {
+  width: 90px;
+  height: 20px;
+  background: #d63031;
+}
+
+#barre2 {
+  width: 40px;
+  height: 20px;
+  background: #00b894;
+}
+
+#barreEn {
+  width: 90px;
+  height: 20px;
+  background: #d63031;
+  margin: 0 auto;
+}
+
+#barreEn2 {
+  width: 40px;
+  height: 20px;
+  background: #00b894;
+}
